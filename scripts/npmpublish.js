@@ -4,12 +4,11 @@ hexo.extend.generator.register('npmpush', function(locals){
       path: '/.github/workflows/autopublish.yml',
       data: `name: Node.js Package
   # 监测分支，2020年10月后github新建仓库默认分支改为main，记得更改
-  on:
+on:
     push:
       branches:
         - master
-  
-  jobs:
+ jobs:
     publish-npm:
       runs-on: ubuntu-latest
       steps:
