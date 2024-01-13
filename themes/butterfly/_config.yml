@@ -51,7 +51,7 @@ avatar:
 disable_top_img: 
 
 # The banner image of home page
-index_img: false
+index_img: 
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: 
@@ -281,7 +281,7 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: false
+  enable: true
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
@@ -292,7 +292,7 @@ newest_comments:
 
 # Conversion between Traditional and Simplified Chinese (簡繁轉換)
 translate:
-  enable: false
+  enable: true
   # The text of a button
   default: 繁
   # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）

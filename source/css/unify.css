@@ -992,8 +992,116 @@ summary {
 template {
   display: none
 }
-#nav{
-  width: auto,
+nav#nav,.nav-content{
+  margin-top: 0px
+}
+/*#menus{
+  flex:1 1 auto;
+  justify-content: flex-end;
+  margin-left: auto;
+  display: flex;
+  flex-wrap:nowrap;
+}
+/* rightMenu */
+[data-theme='light'] #rightMenu{
+  display: none;
+  position: fixed;
+  width: 160px;
+  height: fit-content;
+  top: 10%;
+  left: 10%;
+  background-color: var(--card-bg);
+  border: 1px solid rgb(210,210,210);;
+  border-radius: 8px;
+  z-index: 100;
+  box-shadow: 3px 3px 5px #88888894;
+  background-color: var(--lyx-white-acrylic1);
+  backdrop-filter: blur(30px);
+}
+[data-theme='dark'] #rightMenu{
+  display: none;
+  position: fixed;
+  width: 160px;
+  height: fit-content;
+  top: 10%;
+  left: 10%;
+  background-color: var(--card-bg);
+  border: 1px solid rgb(210,210,210);;
+  border-radius: 8px;
+  z-index: 100;
+  box-shadow: 3px 3px 5px #88888894;
+  background-color: var(--lyx-black-acrylic1);
+  backdrop-filter: blur(30px);
+}
+#rightMenu .rightMenu-group{
+  padding: 7px 6px;
+}
+#rightMenu .rightMenu-group:not(:nth-last-child(1)){
+  border-bottom: 1px solid rgb(180,180,180);
+}
+#rightMenu .rightMenu-group.rightMenu-small{
+  display: flex;
+  justify-content: space-between;
+}
+#rightMenu .rightMenu-group .rightMenu-item{
+  height: 30px;
+  line-height: 30px;
+  border-radius: 8px;
+  transition: 0.3s;
+  color: var(--font-color);
+}
+#rightMenu .rightMenu-group.rightMenu-line .rightMenu-item{
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 4px;
+}
+#rightMenu .rightMenu-group .rightMenu-item:hover{
+  background-color: var(--text-bg-hover);
+  box-shadow: 0px 0px 5px var(--lyx-border);
+}
+#rightMenu .rightMenu-group .rightMenu-item i{
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  padding: 0 5px;
+}
+#rightMenu .rightMenu-group .rightMenu-item span{
+  line-height: 30px;
+}
+#rightMenu:hover{
+  border: 1px solid var(--lyx-blue);
+  /* box-shadow:0 0 3px var(--lyx-blue)!important; */
+}
+#rightMenu .rightMenu-group.rightMenu-line .rightMenu-item *{
+  height: 40px;
+  line-height: 40px;
+}
+.rightMenu-group.hide{
+  display: none;
+}
+.rightMenu-item:hover{
+  color:white!important;
+  background-color:var(--lyx-blue)!important;
+}
+:root{
+  --lyx-border:#c9c9c9;
+  --lyx-blue:#6cf;
+  --lyx-gray:#e2e2e2;
+  --lyx-theme:#6cf;
+  --lyx-green:#39c5bb;
+  --lyx-black-acrylic1: #0008;
+  --lyx-black-acrylic2: #000a;
+  --lyx-black-acrylic3:#00000099;
+  --lyx-black:black;
+  --lyx-white:white;
+  --lyx-white-acrylic1:#fffd;
+  --lyx-white-acrylic2:#fffa;
+  --lyx-blackgray:#797979;
+  --lyx-0:#0000;
+  --lyx-scrollbar: #acacacDD;
 }
 [hidden] {
   display: none
@@ -1184,7 +1292,7 @@ hr:before,
   -o-animation: headerNoOpacity 1s;
   -ms-animation: headerNoOpacity 1s;
   animation: headerNoOpacity 1s;
-}
+}*/
 canvas:not(#ribbon-canvas),
 #web_bg {
   -webkit-animation: to_show 4s;
@@ -2223,7 +2331,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(https://img01.s3.bitiful.net/bg/d6e8a2fb660d41e29c8632adf659bcb3%20%281%29.jpg);
+  background: url(https://api.qjqq.cn/api/Img?sort=acg);
   background-attachment: local;
   background-position: center;
   background-size: cover;
@@ -4634,7 +4742,7 @@ h1.page-title + .tag-cloud-list {
 }
 #page-header.fixed #nav {
   position: fixed;
-}
+}*/
 #page-header.fixed + .layout > .aside-content > .sticky_layout {
   top: 70px;
   -webkit-transition: top 0.5s;
@@ -5736,10 +5844,6 @@ h1.page-title + .tag-cloud-list {
   font-size: 16px;
   line-height: 35px;
 }
-#rightside > div > button:hover,
-#rightside > div > a:hover {
-  background-color: var(--btn-hover-color);
-}
 #rightside #mobile-toc-button {
   display: none;
 }
@@ -6834,7 +6938,7 @@ blockquote.pullquote.right {
 #article-container .tabs > .nav-tabs > .tab:not(.active) button:hover {
   border-top: 2px solid var(--tab-button-hover-bg);
   background: var(--tab-button-hover-bg);
-}
+}*/
 #article-container .tabs > .tab-contents .tab-item-content {
   position: relative;
   display: none;

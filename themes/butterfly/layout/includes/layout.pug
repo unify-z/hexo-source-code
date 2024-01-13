@@ -10,6 +10,7 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
   body
     if theme.preloader.enable
       !=partial('includes/loading/index', {}, {cache: true})
+      !=partial('includes/rightmenu',{}, {cache:true})
 
     if theme.background
       #web_bg
