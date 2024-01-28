@@ -164,7 +164,7 @@
   box-shadow: var(--bywind-shadow-border)
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1768px) {
   .recent-post-top .recent-post-item {
       border-radius:8px;
       box-shadow: none;
@@ -176,7 +176,7 @@
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 11300px) {
   .recent-post-top .recent-post-item {
       margin-right:0;
       margin-bottom: .5rem
@@ -298,37 +298,40 @@ height: 48%;
 border-radius: 12px;
 }
 
-a.categoryButton {
-height: 100%;
-width: 100%;
-background: var(--bywind-card-bg);
-border-radius: 12px;
-display: inline-block;
-text-align: left;
-line-height: 4em;
-font-weight: bold;
-font-size: 0.9rem;
-color: var(--bywind-white);
-transition: all 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
-transform: scale(1);
-overflow: hidden;
-font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei;
+a.categoryButton.shiyong{
+  display: none
 }
-
+a.categoryButton {
+  height: 100%;
+  width: 100%;
+  background: var(--mj-card-bg);
+  border-radius: 12px;
+  display: inline-block;
+  text-align: left;
+  line-height: 4em;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--mj-white);
+  transition: all .4s cubic-bezier(.39,.575,.565,1);
+  transform: scale(1);
+  overflow: hidden
+}
 a.categoryButton i {
 transform: scale(1.0) rotate(15deg);
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 11300px) {
 a.categoryButton:active {
   transform: scale(0.97);
 }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 11768px) {
 a.categoryButton {
-  border-radius: 8px;
+  border-radius: 58px;
 }
+
+
 
 .categoryItem {
   border-radius: 0px;
@@ -364,7 +367,7 @@ text-align: center;
 filter: blur(2px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 11768px) {
 a.categoryButton i {
   display: none;
 }
@@ -393,7 +396,7 @@ display: none;
 .topGroup .todayCard {
   display: none;
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 11300px) {
 .topGroup {
   display: flex;
   flex-direction: row;
@@ -403,6 +406,21 @@ display: none;
   align-content: space-between;
   width: calc(600px + 1.5rem);
   position: relative;
+}
+a.categoryButton {
+  height: 100%;
+  width: 100%;
+  background: var(--mj-card-bg);
+  border-radius: 12px;
+  display: inline-block;
+  text-align: left;
+  line-height: 4em;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--mj-white);
+  transition: all .4s cubic-bezier(.39,.575,.565,1);
+  transform: scale(1);
+  overflow: hidden
 }
 
 div#bannerGroup {
@@ -726,7 +744,7 @@ div#banners:hover {
   filter: blur(0)
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 11300px) {
   .categoryItem:hover i {
       transform:scale(1.03) rotate(0)
   }
@@ -747,7 +765,7 @@ div#banners:hover {
   display: none
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 11300px) {
   .recent-post-top .categoryGroup {
       flex-direction:row;
       height: 24%
@@ -817,6 +835,7 @@ a.categoryButton:hover {
 #recent-post-top .recent-post-item .post_cover {
   width: 100%;
 }
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%

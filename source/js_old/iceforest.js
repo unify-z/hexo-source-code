@@ -35,17 +35,17 @@ var os = function() {
 
 if(os.isAndroid || os.isPhone) {
     console.log("手机访问，引入手机端css")
-    loadcss('/css/iceforest_wap.css')
+    loadcss('/css_old/iceforest_wap.css')
 } else if(os.isTablet) {
     console.log("平板访问，引入pc端ffcss")
-    loadcss('/css/iceforest_firefox.css')
+    loadcss('/css_old/iceforest_firefox.css')
 } else if(os.isChrome) {
     console.log("电脑访问，引入pc端css")
-    loadcss('/css/iceforest.css')
+    loadcss('/css_old/iceforest.css')
 }
   else if(os.isFireFox) {
     console.log("电脑访问，引入pc端(firefox)css")
-    loadcss('/css/iceforest_firefox.css')
+    loadcss('/css_old/iceforest_firefox.css')
 
 
   }

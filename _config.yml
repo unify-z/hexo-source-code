@@ -116,7 +116,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
+theme: butterfly1
 
  #Deployment
  #Docs: https://hexo.io/docs/one-command-deployment
@@ -143,7 +143,7 @@ deploy:
     ###########people_js: https://npm.elemecdn.com/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/people.min.js # 随机逛逛js
 
 butterfly_article_double_row:
-  enable: true
+  enable: false
 
 electric_clock:
   priority: 5
