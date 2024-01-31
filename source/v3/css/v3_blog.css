@@ -255,12 +255,16 @@
   }
   
   #home_top {
-    max-width: 1800px;
     margin: auto;
-    margin-top: .5rem;
-    padding: 0 1.5rem;
-    width: 100%
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    position: relative;
   }
+  
   
   @media screen and (max-width: 768px) {
     #home_top {
@@ -541,10 +545,12 @@
   }
   @media screen and (min-width: 11300px) {
   .topGroup {
+    margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     height: calc(328px + 0.5rem);
     align-content: space-between;
     width: calc(600px + 1.5rem);
@@ -1761,15 +1767,45 @@
     background-repeat: no-repeat;
   }
 .layout.hide-aside {
-    max-width: 1300px
+    max-width: 1250px
+}
+
+#body-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh
 }
 
 .layout {
-    display: flex;
-    margin: 0 auto;
-    padding: .35rem 2.5px;
-    max-width: 1300px
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  margin: 0 auto;
+  padding: 40px 15px;
+  max-width: 1300px;
+  width: 100%
 }
+
 /* rightMenu */
 [data-theme='light'] #rightMenu{
     display: none;
