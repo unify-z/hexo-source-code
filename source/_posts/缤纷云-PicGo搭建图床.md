@@ -5,6 +5,7 @@ abbrlink: 9bf74e64
 date: 2023-07-30 10:22:28
 cover: https://img01.s3.bitiful.net/2023/07/07a5f303d6bfab8c6769acc522300c1b.webp
 swiper_index: 2
+random: true
 ---
 
 ## 为什么要选择PicGo+缤纷云

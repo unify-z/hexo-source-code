@@ -3,15 +3,15 @@
 # --------------------------------------
 
 menu:
-   主页: / || fas fa-home
-   时间轴: /archives/ || fas fa-archive
-   标签: /tags/ || fas fa-tags
-   分类: /categories/ || fas fa-folder-open
+   主页: / || iconfont icon-zhuye
+   时间轴: /archives/ || iconfont icon-guidang
+   标签: /tags/ || iconfont icon-biaoqian
+   分类: /categories/ || iconfont icon-fenlei
    #List||fas fa-list:
     # Music: /music/ || fas fa-music
      #Movie: /movies/ || fas fa-video
-   友人帐: /link/ || fas fa-link
-   关于: /about/ || fas fa-heart
+   友人帐: /link/ || iconfont icon-lianjie
+   关于: /about/ || iconfont icon-guanyuwomen
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -35,8 +35,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/xxxxx || Github
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+   fab fa-github: https://github.com/xxxxx || Github
+   fas fa-envelope: mailto:xxxxxx@gmail.com || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -170,7 +170,7 @@ index_post_content:
 # anchor
 anchor:
   button:
-    enable: false
+    enable: true
     always_show: false
     icon: # the unicode value of Font Awesome icon, such as '\3423'
   auto_update: false # when you scroll in post, the URL will update according to header id.
@@ -611,7 +611,7 @@ font:
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
   font_link:
-  font-family:
+  font-family: iconfont
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
@@ -831,8 +831,8 @@ aplayerInject:
 # position 彈窗位置
 # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
-  position: bottom-left
+  enable: true
+  position: top-left
   bg_light: '#49b1f5' # The background color of Toast Notification in light mode
   bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
 
@@ -886,15 +886,25 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+    - <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+    - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    - <script>LA.init({id:"3GjHqQibQIhIGBDY",ck:"3GjHqQibQIhIGBDY"})</script>
+    - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+    - <script>new LingQue.Monitor().init({id:"3GjHwsqMJN8mrysC"});</script>
+    - <script src="/v3/js/iceforest.js"></script>
+    - <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/js/fontawesome.js"></script>
+    - <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/js/fontawesome.min.js"></script>
+    - <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     - <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css">
-    - <link rel="stylesheet" type="text/css" href="/v3/css/v3_blog.css">
-    - <link rel="stylesheet" type="text/css" href="/css/webmaincolor.css">
+    - <link rel="stylesheet" type="text/css" href="/iconfont.css">
+    #- <link rel="stylesheet" type="text/css" href="/css/webmaincolor.css">
+    #- <script defer data-pjax src="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu-pro/lib/swiper_init.js"></script>
+    #- <script defer src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/js/swiper.min.js"></script>
   bottom:
     # - <script src="xxxx"></script>
-    - <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+    #- <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
     - <script async src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.js"></script>
-    - <script src="/js_old/iceforest.js"></script>
+    
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -903,12 +913,12 @@ CDN:
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # Dev version can only choose. ( dev版的主題只能設置為 local )
-  internal_provider: cdnjs
+  internal_provider: local
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # when set it to local, you need to install hexo-butterfly-extjs
-  third_party_provider: cdnjs
+  third_party_provider: unpkg
 
   # Add version number to CDN, true or false
   version: false
@@ -918,7 +928,7 @@ CDN:
   custom_format: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file
   # 主页卡片样式
   # Docs: https://akilar.top/posts/d6b69c49/
-  index_card_style: multicard # slidecard | multicard
+  #index_card_style: multicard # slidecard | multicard
 
 
   option:
@@ -962,7 +972,7 @@ CDN:
     # fireworks:
     # click_heart:
     # ClickShowText:
-     #fontawesomeV6: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css
+     fontawesomeV6: https://use.fontawesome.com/releases/v6.4.2/css/all.css
     # flickr_justified_gallery_js:
     # flickr_justified_gallery_css:
     # aplayer_css:

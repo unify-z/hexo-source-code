@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 听风
+title: 听风小屋
 subtitle: '花开花落 人间无暇'
 description: ''
 keywords:
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://blog.akaos233.top
+url: https://blog.hcwind.site
 permalink: p/:abbrlink.html
 permalink_defaults:
 pretty_urls:

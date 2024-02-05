@@ -1,0 +1,48 @@
+- class_name: categoryGroup
+  category:
+    - name: 前端
+      path: /categories/前端/
+      shadow: var(--marcus-shadow-blue)
+      class: blue
+      icon: fas fa-dove
+    - name: 大学
+      path: /categories/大学/
+      shadow: var(--marcus-shadow-red)
+      class: red
+      icon: fas fa-burn
+    - name: 生活
+      path: /categories/生活/
+      shadow: var(--marcus-shadow-green)
+      class: green
+      icon: fas fa-book
+  post_list:
+    - cover: https://tvax1.sinaimg.cn/large/466f79e8ly1gznu8oc8ftj22t0140kjl.jpg
+      timeline: '2022-12-04'
+      link: /p/42a88467.html
+      title: 记一次全体故障
+      description: 记一次全体故障
+    - cover: https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeecn4fnj23po2eaka1.jpg
+      timeline: '2022-12-03'
+      link: /p/2022week49.html
+      title: 第49周周记
+      description: 依旧，也是来写篇周记吧!
+    - cover: https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeedna8xj22bc1awwzs.jpg
+      timeline: '2022-10-02'
+      link: /p/a2c6a34f.html
+      title: Hexo的twikoo,valine和waline配置
+      description: Hexo的twikoo,valine和waline配置
+    - cover: https://tvax1.sinaimg.cn/large/466f79e8ly1gzntnm2ce1j22yn28eb2b.jpg
+      timeline: '2022-07-28'
+      link: /p/6709fc4a.html
+      title: cloudreve--好用的网盘系统(Replit搭建)
+      description: 使用Replit搭建Cloudreve
+    - cover: https://tvax1.sinaimg.cn/large/466f79e8ly1gznu8tk060j227r1uhqv5.jpg
+      timeline: '2022-07-25'
+      link: /p/e70bf4f.html
+      title: Replit.com--超好用的类Linux服务器
+      description: 分享一下Replit.com
+    - cover: https://tvax1.sinaimg.cn/large/466f79e8ly1gzoecgkrg1j22yo1o0e81.jpg
+      timeline: '2022-03-31'
+      link: /p/a806bebe.html
+      title: 鱼了个鱼
+      description: 鱼了个鱼
