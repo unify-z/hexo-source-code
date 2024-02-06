@@ -641,7 +641,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background: https://img01.s3.bitiful.net/bg/724a141e9ffd4a519b9d582151f1c54d.png
+background: https://pic.hcwind.site/bg/724a141e9ffd4a519b9d582151f1c54d.png
 
 # Footer Background
 footer_bg: false

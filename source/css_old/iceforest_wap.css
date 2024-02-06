@@ -425,10 +425,10 @@ hr {
   /*外联字体引入*/
   @font-face {
     font-family: "iconfont"; /* Project id 3498204 */
-    src: url('https://img01.s3.bitiful.net/ttf/iconfont.woff2') format('woff2'),
-         url('https://img01.s3.bitiful.net/ttf/iconfont.woff') format('woff'),
-         url('https://img01.s3.bitiful.net/ttf/iconfont.ttf') format('truetype'),
-         url('https://img01.s3.bitiful.net/ttf/1.ttf') format('truetype');
+    src: url('https://pic.hcwind.site/ttf/iconfont.woff2') format('woff2'),
+         url('https://pic.hcwind.site/ttf/iconfont.woff') format('woff'),
+         url('https://pic.hcwind.site/ttf/iconfont.ttf') format('truetype'),
+         url('https://pic.hcwind.site/ttf/1.ttf') format('truetype');
   }
   
   .iconfont {

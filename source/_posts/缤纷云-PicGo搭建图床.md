@@ -3,7 +3,7 @@ title: 缤纷云+PicGo搭建图床
 tags: 图床 PicGo
 abbrlink: 9bf74e64
 date: 2023-07-30 10:22:28
-cover: https://img01.s3.bitiful.net/2023/07/07a5f303d6bfab8c6769acc522300c1b.webp
+cover: https://pic.hcwind.site/2023/07/07a5f303d6bfab8c6769acc522300c1b.webp
 swiper_index: 2
 random: true
 ---
@@ -50,19 +50,19 @@ Node.js:https://nodejs.org
 
 ​			2.之后在picgo中搜索插件"s3"，下载第一个即可。后面那个也会介绍具体配置内容，可能略有不同。
 
-![6729ee5bc42bc1b2e0b362cdd5938ab5](https://img01.s3.bitiful.net/2023/07/6729ee5bc42bc1b2e0b362cdd5938ab5.png)
+![6729ee5bc42bc1b2e0b362cdd5938ab5](https://pic.hcwind.site/2023/07/6729ee5bc42bc1b2e0b362cdd5938ab5.png)
 
 #### 第二步：创建储存桶
 
 ​			进入控制台后，点击“创建”，然后如图设置，注意这边权限一定要选公开桶，否则他人访问不了你的图片！
 
-![{61ACE84F-04F0-44c3-B5D2-1E5888727C42}](https://img01.s3.bitiful.net/2023/07/ed5e0ad6ed54bbf68e7a63451f1ccfed.png)
+![{61ACE84F-04F0-44c3-B5D2-1E5888727C42}](https://pic.hcwind.site/2023/07/ed5e0ad6ed54bbf68e7a63451f1ccfed.png)
 
-​		创建完后，回到控制台，进入"AccessKey"页面，然后点击右上角"创建子用户"，名称随意。不出意外的话你将会看到Access Key和Secret Key。先找个东西记录下来，等下要用。![{6EA4A23A-CFA3-4495-8158-238469BE6A56}](https://img01.s3.bitiful.net/2023/07/2479d493c3702ca1ef00f56ddc18cc39.png)
+​		创建完后，回到控制台，进入"AccessKey"页面，然后点击右上角"创建子用户"，名称随意。不出意外的话你将会看到Access Key和Secret Key。先找个东西记录下来，等下要用。![{6EA4A23A-CFA3-4495-8158-238469BE6A56}](https://pic.hcwind.site/2023/07/2479d493c3702ca1ef00f56ddc18cc39.png)
 
-![{F12C5CEE-FC33-439b-8F94-C3F0C5C53516}](https://img01.s3.bitiful.net/2023/07/263047613a2a07ca1117bd693ae8c863.png)
+![{F12C5CEE-FC33-439b-8F94-C3F0C5C53516}](https://pic.hcwind.site/2023/07/263047613a2a07ca1117bd693ae8c863.png)
 
-​			然后设定权限，务必四个全勾（都有用）	 ![{BFB71FBD-5785-4762-9E39-E4BE9549C252}](https://img01.s3.bitiful.net/2023/07/f56463c08d9aa61793eb004af016eb18.png)
+​			然后设定权限，务必四个全勾（都有用）	 ![{BFB71FBD-5785-4762-9E39-E4BE9549C252}](https://pic.hcwind.site/2023/07/f56463c08d9aa61793eb004af016eb18.png)
 
 ​			随后回到PicGo，在图床设置里点击"Amazon S3"，照下图设置
 
@@ -76,16 +76,16 @@ Node.js:https://nodejs.org
 
 ​			自定义域名：https://{buckets-name}.s3.bitiful.net/
 
-​	·				   ![{EB9F3C99-1261-4be5-A25D-0F14F0BD9C12}](https://img01.s3.bitiful.net/2023/07/eaa6eaca38052cb33317fc2301f384c3.png)
+​	·				   ![{EB9F3C99-1261-4be5-A25D-0F14F0BD9C12}](https://pic.hcwind.site/2023/07/eaa6eaca38052cb33317fc2301f384c3.png)
 
 #### 			测试上传
 
 ​			不出意外的话现在就已经设置完了，这时候返回主页测试图片能不能上传成功
 
-​			![b7719ad4d6e14706203a1c49138e867c](https://img01.s3.bitiful.net/2023/07/b7719ad4d6e14706203a1c49138e867c.png)
+​			![b7719ad4d6e14706203a1c49138e867c](https://pic.hcwind.site/2023/07/b7719ad4d6e14706203a1c49138e867c.png)
 
 ​			验证在缤纷云里是否上传成功
 
-​	![2ad1b60e3ac94d36e45c6bda66c8c9e6](http://img01.s3.bitiful.net/2023/07/2ad1b60e3ac94d36e45c6bda66c8c9e6.png)
+​	![2ad1b60e3ac94d36e45c6bda66c8c9e6](http://pic.hcwind.site/2023/07/2ad1b60e3ac94d36e45c6bda66c8c9e6.png)
 
 ​		 

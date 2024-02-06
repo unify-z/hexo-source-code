@@ -76,11 +76,11 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://img01.s3.bitiful.net/2023/07/07d3bd094d9fc85bc19220208b516552.jpg
+favicon: https://pic.hcwind.site/2023/07/07d3bd094d9fc85bc19220208b516552.jpg
 
 # Avatar (頭像)
 avatar:
-  img: https://img01.s3.bitiful.net/2023/07/07d3bd094d9fc85bc19220208b516552.jpg
+  img: https://pic.hcwind.site/2023/07/07d3bd094d9fc85bc19220208b516552.jpg
   effect: false
 
 # Disable all banner image
@@ -519,7 +519,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background: url(https://img01.s3.bitiful.net/2023/07/07a5f303d6bfab8c6769acc522300c1b.webp)
+background: url(https://pic.hcwind.site/2023/07/07a5f303d6bfab8c6769acc522300c1b.webp)
 
 # Footer Background
 footer_bg: false
@@ -604,14 +604,14 @@ beautify:
 font:
   global-font-size:
   code-font-size:
-  font-family: iconfont
-  code-font-family: iconfont
+  font-family: iconfont,lxgw
+  code-font-family: iconfont,lxgw
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
-  font_link:
-  font-family: iconfont
+  font_link: 
+  font-family: iconfont,lxgw
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
@@ -643,11 +643,11 @@ subtitle:
 
 # Loading Animation (加載動畫)
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
 
@@ -849,7 +849,7 @@ pangu:
 # Lazyload (圖片懶加載)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
+  enable: true
   field: site # site/post
   placeholder:
   blur: false
@@ -886,7 +886,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+    - <script src="https://jsd.cdn.zzko.cn/npm/jquery@latest/dist/jquery.min.js"></script>
     - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     - <script>LA.init({id:"3GjHqQibQIhIGBDY",ck:"3GjHqQibQIhIGBDY"})</script>
     - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
@@ -895,7 +895,7 @@ inject:
     - <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/js/fontawesome.js"></script>
     - <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/js/fontawesome.min.js"></script>
     - <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    - <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css">
+    - <link rel="stylesheet" type="text/css" href="https://jsd.cdn.zzko.cn/npm/js-heo@1.0.11/mainColor/heoMainColor.css">
     - <link rel="stylesheet" type="text/css" href="/iconfont.css">
     #- <link rel="stylesheet" type="text/css" href="/css/webmaincolor.css">
     #- <script defer data-pjax src="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu-pro/lib/swiper_init.js"></script>
@@ -903,7 +903,7 @@ inject:
   bottom:
     # - <script src="xxxx"></script>
     #- <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
-    - <script async src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.js"></script>
+    - <script async src="https://jsd.cdn.zzko.cn/npm/js-heo@1.0.11/categoryBar/categoryBar.js"></script>
     
 
 # CDN
@@ -913,12 +913,12 @@ CDN:
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # Dev version can only choose. ( dev版的主題只能設置為 local )
-  internal_provider: local
+  internal_provider: cdnjs
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # when set it to local, you need to install hexo-butterfly-extjs
-  third_party_provider: unpkg
+  third_party_provider: cdnjs
 
   # Add version number to CDN, true or false
   version: false

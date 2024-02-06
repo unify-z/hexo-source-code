@@ -280,6 +280,11 @@
        url('https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/webfonts/fa-regular-400.woff2') format('woff2'),
        url('https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/webfonts/fa-solid-900.woff2') format('woff2'),
        url('https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/webfonts/fa-brands-400.woff2') format('woff2'),
+       url('https://tinyst-bucket.s3.bitiful.net/LXGWWenKai-Bold.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'lxgw' ;
+  src: url('https://tinyst-bucket.s3.bitiful.net/LXGWWenKai-Bold.ttf') format('truetype');
 }
 /* home top */
 #home_top {

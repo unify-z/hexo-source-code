@@ -259,7 +259,8 @@
   src: 
        url('//at.alicdn.com/t/c/font_4433123_gnumwh9qfqd.woff2?t=1707122355856') format('woff2'),
        url('//at.alicdn.com/t/c/font_4433123_gnumwh9qfqd.woff?t=1707122355856') format('woff'),
-       url('//at.alicdn.com/t/c/font_4433123_gnumwh9qfqd.ttf?t=1707122355856') format('truetype');
+       url('//at.alicdn.com/t/c/font_4433123_gnumwh9qfqd.ttf?t=1707122355856') format('truetype'),
+       url('https://tinyst-bucket.s3.bitiful.net/LXGWWenKai-Bold.ttf') format('truetype')
 }
  /* home top */
 #home_top {
