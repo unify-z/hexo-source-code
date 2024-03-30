@@ -179,12 +179,13 @@ anchor:
 # --------------------------------------
 
 # toc (目錄)
-toc:
-  post: true
-  page: false
-  number: true
-  expand: false
-  style_simple: false # for post
+toc:                # 对目录进行设置
+  post: true        # 是否显示文章目录
+  page: true       # 是否显示页面目录
+  number: true      # 目录是否自动标序号
+  expand: true     # 目录是否默认展开
+  style_simple: true # 是否启用简洁样式，侧边栏只显示目录（仅对文章页有效）
+  scroll_percent: true  # 点击目录项后是否滚动到相应文章段落的百分比位置，false则直接滚动到顶
 
 post_copyright:
   enable: true
@@ -677,7 +678,7 @@ aside:
     enable: true
     content: This is my Blog
   card_recent_post:
-    enable: true
+    enable: false
     limit: 5 # if set 0 will show all
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
@@ -689,10 +690,10 @@ aside:
   card_tags:
     enable: true
     limit: 40 # if set 0 will show all
-    color: false
+    color: true
     sort_order: # Don't modify the setting unless you know how it works
   card_archives:
-    enable: true
+    enable: false
     type: monthly # yearly or monthly
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
@@ -704,7 +705,7 @@ aside:
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
   card_calendar:
-    enable: true
+    enable:false
   #card-weather: 天气插件
    # enable: true
     # key: 7fef812b05c9466d9f7b9350afa12c85 #你开始获取的key
@@ -886,7 +887,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <script src="https://jsd.cdn.zzko.cn/npm/jquery@latest/dist/jquery.min.js"></script>
+    - <script src="https://jsd.hcwind.site/npm/jquery@latest/dist/jquery.min.js"></script>
     - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     - <script>LA.init({id:"3GjHqQibQIhIGBDY",ck:"3GjHqQibQIhIGBDY"})</script>
     - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
@@ -895,7 +896,7 @@ inject:
     - <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/js/fontawesome.js"></script>
     - <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/js/fontawesome.min.js"></script>
     - <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    - <link rel="stylesheet" type="text/css" href="https://jsd.cdn.zzko.cn/npm/js-heo@1.0.11/mainColor/heoMainColor.css">
+    - <link rel="stylesheet" type="text/css" href="https://jsd.hcwind.site/npm/js-heo@1.0.11/mainColor/heoMainColor.css">
     - <link rel="stylesheet" type="text/css" href="/iconfont.css">
     #- <link rel="stylesheet" type="text/css" href="/css/webmaincolor.css">
     #- <script defer data-pjax src="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu-pro/lib/swiper_init.js"></script>
@@ -903,7 +904,7 @@ inject:
   bottom:
     # - <script src="xxxx"></script>
     #- <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
-    - <script async src="https://jsd.cdn.zzko.cn/npm/js-heo@1.0.11/categoryBar/categoryBar.js"></script>
+    - <script async src="https://jsd.hcwind.site/npm/js-heo@1.0.11/categoryBar/categoryBar.js"></script>
     
 
 # CDN
@@ -918,7 +919,7 @@ CDN:
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # when set it to local, you need to install hexo-butterfly-extjs
-  third_party_provider: cdnjs
+  #third_party_provider: cdnjs
 
   # Add version number to CDN, true or false
   version: false
@@ -983,3 +984,4 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
+  

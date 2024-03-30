@@ -3,7 +3,6 @@ title: 缤纷云+PicGo搭建图床
 tags: 图床 PicGo
 abbrlink: 9bf74e64
 date: 2023-07-30 10:22:28
-cover: https://pic.hcwind.site/2023/07/07a5f303d6bfab8c6769acc522300c1b.webp
 swiper_index: 2
 random: true
 ---
