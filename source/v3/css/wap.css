@@ -535,14 +535,13 @@ a.categoryButton i {
 
 .topGroup {
 display: flex;
-background: var(--lyx-black-acrylic2);
 }
 
 #bannerGroup {
-display: flex;
-background: var(--lyx-black-acrylic2);
+  display:flex;
 }
 #recent-post-top{
+  display: none;
 margin-left: 10px;
 }
 
@@ -1528,6 +1527,13 @@ a.categoryButton:hover {
 
 #recent-posts>.recent-post-item>.recent-post-info>.content {
     -webkit-line-clamp: 2
+}
+#page_header{
+  display: none;
+}
+@font-face {
+  font-family: 'lxgw' ;
+  src: url('https://tinyst-bucket.s3.bitiful.net/LXGWWenKai-Bold.ttf') format('truetype');
 }
 #web_bg {
     position: fixed;
