@@ -57,5 +57,5 @@
           git push --force --quiet "https://unify-z:${{ secrets.TK }}@github.com/unify-z/unify-z.github.io.git" master:master
       - name: 通过ftp上传文件
         run: |
-            sudo apt-get update && sudo apt-get install lftp
+            sudo apt-get update && sudo apt-get install lftp -y
             lftp -e "set ssl:verify-certificate no; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}; mirror -R ./public /; quit"
