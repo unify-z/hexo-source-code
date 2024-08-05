@@ -55,7 +55,12 @@
           git add .
           git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
           git push --force --quiet "https://unify-z:${{ secrets.TK }}@github.com/unify-z/unify-z.github.io.git" master:master
-      - name: 通过ftp上传文件
-        run: |
-            sudo apt-get update && sudo apt-get install lftp -y
-            lftp -e "set ssl:verify-certificate no; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}; mirror -R ./public /; quit"
+      - name: 推送文件到服务器
+        uses: peaceiris/actions-sftp@v4
+        with:
+            files: "./public/*"
+            host: ${{ secrets.SFTP_HOST }}
+            port: ${{ secrets.SFTP_PORT }}
+            username: ${{ secrets.SFTP_USERNAME }}
+            password: ${{ secrets.SFTP_PASSWORD }}
+            key: DEPLOY
