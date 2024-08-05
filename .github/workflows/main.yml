@@ -1,10 +1,10 @@
-# 当有改动推送到master分支时，启动Action-
+
   name: 自动部署
 
   on:
     push:
       branches:
-        - master #2020年10月后github新建仓库默认分支改为main，注意更改
+        - master 
   
     release:
       types:
@@ -17,12 +17,12 @@
       - name: 检查分支
         uses: actions/checkout@v2
         with:
-          ref: master #2020年10月后github新建仓库默认分支改为main，注意更改
+          ref: master 
   
       - name: 安装 Node
         uses: actions/setup-node@v1
         with:
-          node-version: "20.x" #action使用的node版本，建议大版本和本地保持一致。可以在本地用node -v查询版本号。
+          node-version: "20.x" 
   
       - name: 安装 Hexo
         run: |
@@ -55,3 +55,12 @@
           git add .
           git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
           git push --force --quiet "https://unify-z:${{ secrets.TK }}@github.com/unify-z/unify-z.github.io.git" master:master
+      - name: 部署至ftp服务器
+        uses: SamKirkwood/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /1panel/apps/openresty/openresty/www/sites/blog.ifeng.asia/index
+          local-dir: ./pubilc
+          args: -v -e -c -P
