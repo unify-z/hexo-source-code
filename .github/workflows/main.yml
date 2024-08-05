@@ -58,4 +58,4 @@
       - name: 通过ftp上传文件
         run: |
             sudo apt-get update && sudo apt-get install lftp
-            lftp -e "set ssl:verify-certificate no; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}; mirror -R ./public /1panel/apps/openresty/openresty/www/sites/blog.ifeng.asia/index; quit"
+            lftp -e "set ssl:verify-certificate no; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}; mirror -R ./public /; quit"
