@@ -55,12 +55,7 @@
           git add .
           git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
           git push --force --quiet "https://unify-z:${{ secrets.TK }}@github.com/unify-z/unify-z.github.io.git" master:master
-      - name: 部署至ftp服务器
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /1panel/apps/openresty/openresty/www/sites/blog.ifeng.asia/index
-          local-dir: ./pubilc
-          args: -v -e -c -P
+      - name: 通过ftp上传文件
+        run: |
+            sudo apt-get update && sudo apt-get install lftp
+            lftp -e "set ssl:verify-certificate no; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}; mirror -R ./public /1panel/apps/openresty/openresty/www/sites/blog.ifeng.asia/index; quit"
