@@ -1,13 +1,13 @@
 hexo.extend.helper.register('findArchiveLength', function (func) {
-  const allPostsLength = this.site.posts.length
-  if (hexo.config.archive_generator && hexo.config.archive_generator.enable === false) return allPostsLength
+  const allPostsLength = this.site.posts.length;
+  if (hexo.config.archive_generator && hexo.config.archive_generator.enable === false ) return allPostsLength
   const { yearly, monthly, daily } = hexo.config.archive_generator
   const { year, month, day } = this.page
   if (yearly === false || !year) return allPostsLength
 
   const posts = this.site.posts.sort('date')
 
-  const compareFunc = (type, y1, m1, d1, y2, m2, d2) => {
+  const compareFunc = (type,y1,m1,d1,y2,m2,d2) => {
     if (type === 'year') {
       return y1 === y2
     } else if (type === 'month') {
@@ -18,15 +18,15 @@ hexo.extend.helper.register('findArchiveLength', function (func) {
   }
 
   const generateDateObj = (type) => {
-    const dateObj = []
+    let dateObj = []
     let length = 0
 
     posts.forEach(post => {
-      const date = post.date.clone()
+      let date = post.date.clone()
       const year = date.year()
       const month = date.month() + 1
       const day = date.date()
-      const lastData = dateObj[length - 1]
+      let lastData = dateObj[length - 1]
 
       if (!lastData || !compareFunc(type, lastData.year, lastData.month, lastData.day, year, month, day)) {
         const name = type === 'year' ? year : type === 'month' ? `${year}-${month}` : `${year}-${month}-${day}`
@@ -40,12 +40,12 @@ hexo.extend.helper.register('findArchiveLength', function (func) {
       } else {
         lastData.count++
       }
-    })
+    });
 
     return dateObj
   }
 
-  const data = func('createArchiveObj', () => {
+  const data = func('createArchiveObj', ()=> {
     const yearObj = yearly ? generateDateObj('year') : []
     const monthObj = monthly ? generateDateObj('month') : []
     const dayObj = daily ? generateDateObj('day') : []

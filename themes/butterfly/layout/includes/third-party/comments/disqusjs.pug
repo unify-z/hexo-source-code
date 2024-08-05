@@ -2,6 +2,13 @@
 
 script.
   function loadDisqusjs () {
+    function addDisqusjsCSS () {
+      const ele = document.createElement('link')
+      ele.rel = 'stylesheet'
+      ele.href= '!{url_for(theme.asset.disqusjs_css)}'
+      document.getElementsByTagName('head')[0].appendChild(ele)
+    }
+
     function initDisqusjs () {
       window.disqusjs = null
       disqusjs = new DisqusJS(Object.assign({
@@ -27,7 +34,7 @@ script.
 
     if (window.disqusJsLoad) initDisqusjs()
     else {
-      getCSS('!{url_for(theme.asset.disqusjs_css)}')
+      addDisqusjsCSS()
       getScript('!{url_for(theme.asset.disqusjs)}').then(initDisqusjs)
       window.disqusJsLoad = true
     }

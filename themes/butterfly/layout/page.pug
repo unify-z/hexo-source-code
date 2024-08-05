@@ -7,23 +7,11 @@ block content
 
     case page.type
       when 'tags'
-        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
         include includes/page/tags.pug
       when 'link'
-        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
         include includes/page/flink.pug
       when 'categories'
-        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
         include includes/page/categories.pug
-      when 'about'
-        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
-        include includes/page/about.pug
-      when 'essay'
-        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
-        include includes/page/essay.pug
-      when 'games'
-        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
-        include includes/page/games.pug
       default
         include includes/page/default-page.pug
 

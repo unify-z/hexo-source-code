@@ -1,12 +1,10 @@
-
 extends includes/layout.pug
 
 block content
   #post
-    link(rel='stylesheet' href='/css/demo2.css' type='text/css')
     if top_img === false
       include includes/header/post-info.pug
-      
+
     article#article-container.post-content!=page.content
     include includes/post/post-copyright.pug
     .tag_share

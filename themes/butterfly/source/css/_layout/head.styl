@@ -124,8 +124,7 @@
       background: rgba(255, 255, 255, .8)
       box-shadow: 0 5px 6px -5px rgba(133, 133, 133, .6)
 
-      a,
-      .site-name
+      a
         color: var(--font-color)
         text-shadow: none
 
@@ -134,20 +133,12 @@
       position: fixed
       top: -60px
       z-index: 91
-      // background: rgba(255, 255, 255, .8)
-      // box-shadow: 0 5px 6px -5px alpha($grey, .6)
+      background: rgba(255, 255, 255, .8)
+      box-shadow: 0 5px 6px -5px alpha($grey, .6)
       transition: transform .2s ease-in-out, opacity .2s ease-in-out
 
-      #blog-info
-        color: var(--font-color)
-
-        &:hover
-          color: $light-blue
-
-        .site-name
-          text-shadow: none
-
       a,
+      #site-name,
       #toggle-menu
         color: var(--font-color)
         text-shadow: none
@@ -155,12 +146,7 @@
         &:hover
           color: $light-blue
 
-    &.fixed
-      #nav
-        top: 0
-        transition: all .5s
-
-  &.nav-visible:not(.fixed)
+  &.nav-visible
     #nav
       transition: all .5s
       transform: translate3d(0, 100%, 0)
@@ -169,19 +155,6 @@
       & > .aside-content > .sticky_layout
         top: 70px
         transition: top .5s
-
-  &.fixed
-    #nav
-      position: fixed
-
-    & + .layout
-      & > .aside-content > .sticky_layout
-        top: 70px
-        transition: top .5s
-
-      #card-toc
-        .toc-content
-          max-height: calc(100vh - 170px)
 
 #page
   h1.page-title
@@ -261,37 +234,8 @@
       time
         display: none
 
-.roll-name-content,
-.nav-fixed.nav-visible .roll-name-content,
-.nav-fixed #nav .menus_items
-  opacity: 0
-  pointer-events: none
-  // overflow: hidden
-.nav-fixed .roll-name-content,
-.nav-fixed.nav-fixed.nav-visible #nav .menus_items,
-.nav-fixed #nav #percent
-  opacity: 1
-  pointer-events: all
-.nav-fixed .nav-content
-  background: rgba(125, 125, 125, .3)
-  backdrop-filter: saturate(240%) blur(20px)
-
-#buttons div,
-.roll-name-content,
-#nav .menus_item
-  border: 3px solid transparent
-  border-radius: 100px
-  text-shadow: 1px 1px #ff8282;
-  a
-    text-shadow: 1px 1px #ff8282 !important;
-  &:hover
-    background: #2333ad !important
-    border-color: #7c8cff
-
 #nav
   position: absolute
-  display flex
-  justify-content: center
   top: 0
   z-index: 90
   display: flex
@@ -305,84 +249,17 @@
 
   +maxWidth768()
     padding: 0 16px
-  .nav-content
-    display: flex
-    width: fit-content
-    align-items: center
-    padding: 0 8px
-    transition: .3s
-    margin-top: 20px
-    height: 60px
-    border-radius: 100px
-
-  #buttons
-    display: flex
-    align-items: center
-    >div
-      height: 40px
-      cursor pointer
-      width: 40px
-      align-items: center
-      justify-content: center
-      margin 0 3px
-      &:not(#to-comment):not(#toggle-menu)
-        display: flex
-  #percent
-    display: flex
-    opacity: 0
-    font-size: 13px
-    font-weight: 700
-    background: rgba(255, 255, 255, .2)
-    color: white
-    width: 25px
-    height: 25px
-    border-radius: 50%
-    justify-content: center
-    align-items: center
-    transition: .3s
-    pointer-events: none
-
-    span
-      &:first-child
-        display: none
-    &:hover
-      span
-        &:first-child
-          display: block
-        &:last-child
-          display: none
-
-  .roll-name-content
-    position: absolute
-    transition: all 0.3s
-    padding: 0 15px
-    a
-      color: white !important
 
   &.show
     opacity: 1
 
-  #blog-info
+  #blog_name
     flex: 1
-    color: var(--light-grey)
-    @extend .limit-one-line
-
-    .site-icon
-      margin-right: 6px
-      height: 45px
-      vertical-align: middle
-      border: 3px solid #7c8cff
-      border-radius: 50%
-      height: 45px
-      width: 45px
-      object-fit: cover
 
   #toggle-menu
     display: none
+    padding: 2px 0 0 6px
     vertical-align: top
-    a
-      padding: 0
-      color: white !important
 
     &:hover
       color: var(--white)
@@ -393,35 +270,22 @@
     &:hover
       color: var(--white)
 
-  .site-name
+  #site-name
     text-shadow: 2px 2px 4px rgba($dark-black, .15)
     font-weight: bold
-  #to-comment
-    display: none
-  #menus
-    display: flex
-    align-items: center
-    justify-content: center
-    margin: 0 20px
-    transition: all 0.3s ease 0s
+    cursor: pointer
+
   .menus_items
-    display: flex
-    white-space: nowrap
-    transition: all 0.3s
+    display: inline
 
     .menus_item
       position: relative
-      display: flex
-      padding: 0 12px
-      height: 40px
-      align-items: center
-      a
-        color: white !important
-        padding: 0
+      display: inline-block
+      padding: 0 0 0 14px
 
       &:hover
         .menus_item_child
-          display: flex
+          display: block
 
         & > a > i:last-child
           transform: rotate(180deg)
@@ -432,18 +296,15 @@
 
       .menus_item_child
         position: absolute
-        left: 50%
-        top: 45px
+        right: 0
         display: none
-        transform: translate(-50%) !important
-        margin: 0
-        padding: 5px
+        margin-top: 8px
+        padding: 0
         width: max-content
-        border-radius: 100px
+        border-radius: 5px
         background-color: var(--sidebar-bg)
         box-shadow: 0 5px 20px -4px rgba($dark-black, .5)
         animation: sub_menus .3s .1s ease both
-        gap: 5px
 
         &:before
           position: absolute
@@ -455,15 +316,17 @@
 
         li
           list-style: none
-          border: 3px solid transparent
-          line-height: 1.5
-          border-radius: 100px
-          &:hover
-            background: #2333ad !important
-            border-color: #7c8cff
-            a
-              color: white !important
 
+          &:hover
+            background: var(--text-bg-hover)
+
+          &:first-child
+            border-top-left-radius: 5px
+            border-top-right-radius: 5px
+
+          &:last-child
+            border-bottom-right-radius: 5px
+            border-bottom-left-radius: 5px
 
           a
             display: inline-block
@@ -474,19 +337,19 @@
 
   &.hide-menu
     #toggle-menu
-      display: flex
+      display: inline-block !important
 
       .site-page
         font-size: inherit
 
-    #menus
+    .menus_items
       display: none
 
     #search-button span
       display: none
 
   #search-button
-    display: none
+    display: inline
     padding: 0 0 0 14px
 
   .site-page
@@ -495,3 +358,19 @@
     text-shadow: 1px 1px 2px rgba($dark-black, .3)
     font-size: .78em
     cursor: pointer
+
+    &:not(.child)
+      &:after
+        position: absolute
+        bottom: 0
+        left: 0
+        z-index: -1
+        width: 0
+        height: 3px
+        background-color: lighten($theme-color, 30%)
+        content: ''
+        transition: all .3s ease-in-out
+
+      &:hover
+        &:after
+          width: 100%

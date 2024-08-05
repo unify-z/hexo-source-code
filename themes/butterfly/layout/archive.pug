@@ -1,7 +1,6 @@
 extends includes/layout.pug
 
 block content
-  link(rel='stylesheet' href='/css/demo2.css' type='text/css')
   include ./includes/mixins/article-sort.pug
   #archive
     - const archiveLength = findArchiveLength(fragment_cache)

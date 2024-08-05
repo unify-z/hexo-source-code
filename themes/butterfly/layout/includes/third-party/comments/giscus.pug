@@ -1,20 +1,16 @@
-- const { repo, repo_id, category_id, theme:themes, option } = theme.giscus
-- const giscusUrl = theme.asset.giscus || 'https://giscus.app/client.js'
-- const giscusOriginUrl = new URL(giscusUrl).origin
-
+- const { repo, repo_id, category_id, option } = theme.giscus
+- const themes = theme.giscus.theme
 script.
-  function getGiscusTheme () {
-    return document.documentElement.getAttribute('data-theme') === 'dark' ? '!{themes.dark}' : '!{themes.light}'
-  }
-
   function loadGiscus () {
+    let nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? '!{themes.dark}' : '!{themes.light}'
+
     const config = Object.assign({
-      src: '!{giscusUrl}',
+      src: 'https://giscus.app/client.js',
       'data-repo': '!{repo}',
       'data-repo-id': '!{repo_id}',
       'data-category-id': '!{category_id}',
       'data-mapping': 'pathname',
-      'data-theme': getGiscusTheme(),
+      'data-theme': nowTheme,
       'data-reactions-enabled': '1',
       crossorigin: 'anonymous',
       async: true
@@ -28,15 +24,17 @@ script.
   }
 
   function changeGiscusTheme () {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? '!{themes.dark}' : '!{themes.light}'
+
     function sendMessage(message) {
-      const iframe = document.querySelector('iframe.giscus-frame')
-      if (!iframe) return
-      iframe.contentWindow.postMessage({ giscus: message }, '!{giscusOriginUrl}')
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
     }
 
     sendMessage({
       setConfig: {
-        theme: getGiscusTheme()
+        theme: theme
       }
     });
   }

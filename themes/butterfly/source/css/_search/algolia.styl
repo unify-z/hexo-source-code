@@ -16,7 +16,7 @@
       @extend .list-beauty
 
       a
-        color: var(--search-a-color)
+        color: var(--search-result-title)
 
         &:hover
           color: $search-color
@@ -26,15 +26,12 @@
         color: $search-keyword-highlight
         font-weight: bold
 
-    .algolia-hits-item-title
-      font-weight: 600
-
     .algolia-hit-item-content
       margin: 0 0 8px
-      word-break: break-word
+      word-break: break-all
 
     .ais-Pagination
-      margin: 15px 0 0
+      margin: 20px 0 0
       padding: 0
       text-align: center
 
@@ -64,16 +61,20 @@
       .ais-Pagination-item--disabled
         visibility: hidden
 
+    .algolia-logo
+      padding-top: 2px
+      width: 80px
+      height: 30px
+
     #algolia-hits
       > div
         overflow-y: scroll
-        margin: 0 -20px
-        padding: 0 22px
-        max-height: calc(80vh - 240px)
+
+        +minWidth768()
+          max-height: calc(80vh - 240px)
 
         +maxWidth768()
-          max-height: none
-          height: calc(var(--search-height) - 265px)
+          height: calc(100vh - 260px)
 
     #algolia-info
       div
@@ -81,7 +82,10 @@
 
       .algolia-poweredBy
         float: right
-        vertical-align: text-top
 
-        svg
-          height: 1.1em
+.apple
+  #algolia-search
+    #algolia-hits
+      > div
+        +maxWidth768()
+          height: calc(90vh - 260px)

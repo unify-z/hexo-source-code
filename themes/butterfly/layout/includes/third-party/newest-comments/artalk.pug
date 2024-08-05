@@ -1,4 +1,4 @@
-- const { server, site, option } = theme.artalk
+- const { server, option } = theme.artalk
 - const avatarCdn = option !== null && option.gravatar ? option.gravatar.mirror : 'https://sdn.geekzu.org/avatar/'
 - const avatarDefault = option !== null && option.gravatar ? option.gravatar.default : 'mp'
 
@@ -45,15 +45,8 @@ script.
       window.pjax && window.pjax.refresh($dom)
     }
 
-    const headerList = {
-      method: 'POST',
-      headers: {
-        'Origin': window.location.origin
-      }
-    }
-
     const getComment = () => {
-      fetch('!{server}/api/stat?type=latest_comments&limit=!{theme.newest_comments.limit}&site_name=!{site}', headerList)
+      fetch('!{server}/api/stat?type=latest_comments&limit=!{theme.newest_comments.limit}',{method: "POST"})
         .then(response => response.json())
         .then(d => {
           const artalk = d.data.map(function (e) {
