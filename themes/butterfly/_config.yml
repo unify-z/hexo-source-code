@@ -899,7 +899,7 @@ css_prefix: true
 inject:
   head:
     - <script src="https://jsd.akaos233.top/npm/jquery@3.6.4/dist/jquery.min.js"></script>
-    - <link rel="stylesheet" type="text/css" href="/css/unify.css">
+    - <link rel="stylesheet" type="text/css" href="/css/blog.css">
     - <link rel="stylesheet" type="text/css" href="/css/about.css">
     - <link rel="stylesheet" type="text/css" href="https://tinyst-bucket.s3.bitiful.net/static/css/about/skills.css">
     - <link rel="stylesheet" type="text/css" href="https://tinyst-bucket.s3.bitiful.net/static/css/about/site.css">

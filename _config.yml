@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 听风小屋
+title: 听风博客
 subtitle: '花开花落 人间无暇'
 description: ''
 keywords:
-author: unifyz
+author: unify-z
 language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://blog.hcwind.site
+url: https://blog.ifeng.asia
 permalink: p/:abbrlink.html
 permalink_defaults:
 pretty_urls:
@@ -116,7 +116,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly1
+theme: butterfly
 
  #Deployment
  #Docs: https://hexo.io/docs/one-command-deployment
