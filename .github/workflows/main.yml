@@ -57,6 +57,8 @@ jobs:
         git push --force --quiet "https://unify-z:${{ secrets.TK }}@github.com/unify-z/unify-z.github.io.git" master:master
     - name: 使用sftp协议部署至服务器
       run: |  
+        apt update
+        apt install lftp -y
         lftp sftp://${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}@${{ secrets.SFTP_HOST }}m -e "  
         set sftp:passive-mode true;  
         set ftp:ssl-allow no;  
