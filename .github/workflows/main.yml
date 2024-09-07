@@ -63,5 +63,5 @@ jobs:
         username: ${{ secrets.SFTP_USERNAME }}
         password: ${{ secrets.SFTP_PASSWORD }}
         source: "./public/"
-        target: "/opt/1panel/apps/openresty/openresty/www/sites/blog.ifeng.asia/index"
+        target: "/www/wwwroot/blog.ifeng.asia"
         strip_component: 1 
